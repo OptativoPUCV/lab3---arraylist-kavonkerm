@@ -31,3 +31,14 @@ arraylist.c:15:24: error: expected expression before ‘)’ token
       |                        ^
 Compilation failed
 4dffbcd
+Wed 29 Mar 2023 08:47:53 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:15:17: error: ‘data’ undeclared (first use in this function)
+   15 |   aList->data = data;
+      |                 ^~~~
+arraylist.c:15:17: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+329b186
