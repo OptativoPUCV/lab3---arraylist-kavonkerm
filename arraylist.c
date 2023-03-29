@@ -10,7 +10,7 @@ typedef struct ArrayList {
     int size;
 } ArrayList;
 
-ArrayList *createList() {
+ArrayList *createList(void *data) {
   ArrayList *aList = (ArrayList*) malloc(sizeof(ArrayList));
   aList->data = data;
   aList->capacity = 0;

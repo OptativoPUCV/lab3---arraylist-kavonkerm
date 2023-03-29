@@ -42,3 +42,33 @@ arraylist.c:15:17: error: ‘data’ undeclared (first use in this function)
 arraylist.c:15:17: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 329b186
+Wed 29 Mar 2023 08:48:36 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c:13:12: error: conflicting types for ‘createList’
+   13 | ArrayList *createList(void *data) {
+      |            ^~~~~~~~~~
+In file included from arraylist.c:4,
+                 from test.c:5:
+arraylist.h:6:12: note: previous declaration of ‘createList’ was here
+    6 | ArrayList *createList(void);
+      |            ^~~~~~~~~~
+test.c: In function ‘test_create’:
+test.c:77:20: error: too few arguments to function ‘createList’
+   77 |     ArrayList* l = createList();
+      |                    ^~~~~~~~~~
+In file included from test.c:5:
+arraylist.c:13:12: note: declared here
+   13 | ArrayList *createList(void *data) {
+      |            ^~~~~~~~~~
+test.c: In function ‘test_all’:
+test.c:325:20: error: too few arguments to function ‘createList’
+  325 |     ArrayList *l = createList();
+      |                    ^~~~~~~~~~
+In file included from test.c:5:
+arraylist.c:13:12: note: declared here
+   13 | ArrayList *createList(void *data) {
+      |            ^~~~~~~~~~
+Compilation failed
+17eaf36
