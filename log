@@ -72,3 +72,15 @@ arraylist.c:13:12: note: declared here
       |            ^~~~~~~~~~
 Compilation failed
 17eaf36
+Wed 29 Mar 2023 08:50:24 PM UTC: 
+ arraylist.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:15:44: error: ‘Arraylist’ undeclared (first use in this function); did you mean ‘ArrayList’?
+   15 |   aList->data = (ArrayList*) malloc(sizeof(Arraylist));
+      |                                            ^~~~~~~~~
+      |                                            ArrayList
+arraylist.c:15:44: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+8b7b373
