@@ -242,3 +242,17 @@ Wed 29 Mar 2023 09:11:31 PM UTC:
  tests:  1|5
 total_score: 10/70
 73247ea
+Wed 29 Mar 2023 09:18:05 PM UTC: 
+ arraylist.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:22:13: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   22 |   int num = l->data[l->size];
+      |             ^
+arraylist.c:22:7: error: unused variable ‘num’ [-Werror=unused-variable]
+   22 |   int num = l->data[l->size];
+      |       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+de02244
