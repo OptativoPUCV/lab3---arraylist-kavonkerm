@@ -145,3 +145,20 @@ arraylist.c:23:7: error: suggest parentheses around assignment used as truth val
 cc1: all warnings being treated as errors
 Compilation failed
 4f69845
+Wed 29 Mar 2023 09:02:33 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:22:3: error: dereferencing ‘void *’ pointer [-Werror]
+   22 |   *data = l->size;
+      |   ^~~~~
+arraylist.c:22:9: error: invalid use of void expression
+   22 |   *data = l->size;
+      |         ^
+arraylist.c:23:7: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   23 |   if (l->size = l->capacity){
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+682f1be
