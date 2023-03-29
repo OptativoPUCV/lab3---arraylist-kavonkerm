@@ -208,3 +208,14 @@ arraylist.c:24:63: error: expected ‘;’ before ‘}’ token
       |   ~                                                            
 Compilation failed
 3923cf2
+Wed 29 Mar 2023 09:10:53 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:23:5: error: ‘list’ undeclared (first use in this function)
+   23 |     list->capacity *= 2;
+      |     ^~~~
+arraylist.c:23:5: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+bab16eb
