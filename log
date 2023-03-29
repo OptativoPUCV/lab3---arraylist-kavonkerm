@@ -84,3 +84,14 @@ arraylist.c:15:44: error: ‘Arraylist’ undeclared (first use in this function
 arraylist.c:15:44: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 8b7b373
+Wed 29 Mar 2023 08:50:34 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:15:15: error: assignment to ‘void **’ from incompatible pointer type ‘ArrayList *’ {aka ‘struct ArrayList *’} [-Werror=incompatible-pointer-types]
+   15 |   aList->data = (ArrayList*) malloc(sizeof(ArrayList));
+      |               ^
+cc1: all warnings being treated as errors
+Compilation failed
+bbd6d90
