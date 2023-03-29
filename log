@@ -187,3 +187,24 @@ arraylist.c:22:7: error: unused variable ‘num’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 7ed3001
+Wed 29 Mar 2023 09:10:44 PM UTC: 
+ arraylist.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:23:5: error: ‘list’ undeclared (first use in this function)
+   23 |     list->capacity *= 2;
+      |     ^~~~
+arraylist.c:23:5: note: each undeclared identifier is reported only once for each function it appears in
+arraylist.c:24:62: error: expected ‘)’ before ‘;’ token
+   24 |     l->data = realloc(l->data,list->capacity * (sizeof(void));
+      |                                                              ^
+      |                                                              )
+arraylist.c:24:63: error: expected ‘;’ before ‘}’ token
+   24 |     l->data = realloc(l->data,list->capacity * (sizeof(void));
+      |                                                               ^
+      |                                                               ;
+   25 |   }
+      |   ~                                                            
+Compilation failed
+3923cf2
