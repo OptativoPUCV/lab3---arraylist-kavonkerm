@@ -131,3 +131,17 @@ arraylist.c:24:43: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 3ef4217
+Wed 29 Mar 2023 09:02:23 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:22:8: error: assignment to ‘void *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   22 |   data = l->size;
+      |        ^
+arraylist.c:23:7: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   23 |   if (l->size = l->capacity){
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+4f69845
