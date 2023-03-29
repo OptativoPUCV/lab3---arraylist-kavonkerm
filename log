@@ -162,3 +162,17 @@ arraylist.c:23:7: error: suggest parentheses around assignment used as truth val
 cc1: all warnings being treated as errors
 Compilation failed
 682f1be
+Wed 29 Mar 2023 09:03:07 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:23:7: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   23 |   if (l->size = l->capacity){
+      |       ^
+arraylist.c:22:7: error: unused variable ‘num’ [-Werror=unused-variable]
+   22 |   int num = l->size;
+      |       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+7ce2dae
