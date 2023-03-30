@@ -36,7 +36,7 @@ void push(ArrayList * l, void * data, int i){
     }
     datos[i] = datos[i+1];
     datos[i] = data;
-    if (i > l->size) break;
+    if (i > l->size) return;
   }
 }
 
