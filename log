@@ -562,3 +562,14 @@ Thu 30 Mar 2023 04:09:29 PM UTC:
  tests:  7|2
 total_score: 40/70
 3df98d0
+Thu 30 Mar 2023 04:16:01 PM UTC: 
+ arraylist.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘push’:
+arraylist.c:40:9: error: unused variable ‘j’ [-Werror=unused-variable]
+   40 |     int j = 0 + i - 1;
+      |         ^
+cc1: all warnings being treated as errors
+Compilation failed
+12fddf9
