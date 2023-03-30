@@ -400,3 +400,14 @@ Thu 30 Mar 2023 03:32:17 PM UTC:
  tests:  7|2
 total_score: 40/70
 21bb6c3
+Thu 30 Mar 2023 03:33:21 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘pop’:
+arraylist.c:45:25: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   45 |   for (i = l->capacity; i = 0; i++){
+      |                         ^
+cc1: all warnings being treated as errors
+Compilation failed
+fc10d7e
