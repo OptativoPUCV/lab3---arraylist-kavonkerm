@@ -70,6 +70,6 @@ int get_size(ArrayList * l){
 void clean(ArrayList * l){
   l->size = 0;
   if (l->capacity >= 2){
-    l->data[l->capacity] = l->data[l->capacity - 1];
+    l->data[l->capacity] = NULL;
   }
 }
