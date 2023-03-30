@@ -56,7 +56,8 @@ int get_size(ArrayList * l){
 
 //remove elements
 void clean(ArrayList * l){
+  l->size = 0;
   if (l->capacity >= 2){
-    l->data[l->size] = l->data[l->size - 1];
+    l->data[l->capacity] = l->data[l->capacity - 1];
   }
 }
