@@ -477,3 +477,13 @@ arraylist.c:26:13: error: void value not ignored as it ought to be
       |             ^
 Compilation failed
 aa231da
+Thu 30 Mar 2023 03:53:38 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:26:13: error: void value not ignored as it ought to be
+   26 |     l->data = (void) realloc(l->data,l->capacity * (sizeof(void)));
+      |             ^
+Compilation failed
+0927efa
