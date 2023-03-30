@@ -37,6 +37,7 @@ void push(ArrayList * l, void * data, int i){
       if (i > l->size) break;
     }
   }
+  l->size = l->size+1;
 }
 
 void* pop(ArrayList * l, int i){
