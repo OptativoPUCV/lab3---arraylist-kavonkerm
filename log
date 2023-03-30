@@ -328,3 +328,22 @@ Thu 30 Mar 2023 01:27:40 AM UTC:
  tests:  3|4
 total_score: 20/70
 80b5a65
+Thu 30 Mar 2023 01:33:36 AM UTC: 
+ arraylist.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘get’:
+arraylist.c:49:24: error: ‘ArrayList’ {aka ‘struct ArrayList’} has no member named ‘dato’; did you mean ‘data’?
+   49 |   if (i < 0) return l->dato[i-1];
+      |                        ^~~~
+      |                        data
+arraylist.c:50:15: error: ‘ArrayList’ {aka ‘struct ArrayList’} has no member named ‘dato’; did you mean ‘data’?
+   50 |     return l->dato[i];
+      |               ^~~~
+      |               data
+arraylist.c:51:1: error: control reaches end of non-void function [-Werror=return-type]
+   51 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+66a4d43
