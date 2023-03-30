@@ -31,14 +31,16 @@ void append(ArrayList * l, void * data){
 //o poner push(l,data,l->size)
 
 void push(ArrayList * l, void * data, int i){
-  void **datos = realloc(l->data, sizeof(*l->data));
   if (i > l->size) return;
   if (l->size == l->capacity){
     l->capacity *= 2;
     l->data = realloc(l->data, sizeof(void*) * l->capacity);
-    for (i = 0; i == l->size; i++){
-    datos[i] = data;
-    datos[i] = datos[i+1];
+  }
+  if (i < l->size){
+    int j;
+    for (j = l->size; j < i; j--){
+      l->data[j] = l->data[j+1];
+    }
   }
 }
 
