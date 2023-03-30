@@ -382,3 +382,9 @@ arraylist.c:61:13: error: ‘i’ undeclared (first use in this function)
 arraylist.c:61:13: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 24ef8db
+Thu 30 Mar 2023 01:45:57 AM UTC: 
+ arraylist.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  6|3
+total_score: 30/70
+bda1342
