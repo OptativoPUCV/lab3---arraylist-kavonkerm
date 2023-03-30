@@ -30,7 +30,7 @@ void append(ArrayList * l, void * data){
 
 void push(ArrayList * l, void * data, int i){
   void **datos = realloc(l->data, sizeof(*l->data));
-  for (i = 0; i < l->size; i++){
+  for (i = 0; i == l->size; i++){
     if (l->size >= l->capacity){
       l->capacity *= 2;
     }
