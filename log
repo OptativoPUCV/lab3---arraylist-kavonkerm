@@ -270,3 +270,14 @@ arraylist.c:23:20: error: ‘num’ is used uninitialized in this function [-Wer
 cc1: all warnings being treated as errors
 Compilation failed
 0730f46
+Thu 30 Mar 2023 12:55:16 AM UTC: 
+ arraylist.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:23:20: error: ‘num’ undeclared (first use in this function)
+   23 |   datos[l->size] = num;
+      |                    ^~~
+arraylist.c:23:20: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+b65c7ba
