@@ -487,3 +487,33 @@ arraylist.c:26:13: error: void value not ignored as it ought to be
       |             ^
 Compilation failed
 0927efa
+Thu 30 Mar 2023 03:53:58 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:15:49: error: passing argument 1 of ‘realloc’ makes pointer from integer without a cast [-Werror=int-conversion]
+   15 |   aList->data = (void **) realloc(sizeof(void*) * (aList->capacity));
+      |                                   ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+      |                                                 |
+      |                                                 long unsigned int
+In file included from test.c:2:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/stdlib.h:550:29: note: expected ‘void *’ but argument is of type ‘long unsigned int’
+  550 | extern void *realloc (void *__ptr, size_t __size)
+      |                       ~~~~~~^~~~~
+In file included from test.c:5:
+arraylist.c:15:27: error: too few arguments to function ‘realloc’
+   15 |   aList->data = (void **) realloc(sizeof(void*) * (aList->capacity));
+      |                           ^~~~~~~
+In file included from test.c:2:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/stdlib.h:550:14: note: declared here
+  550 | extern void *realloc (void *__ptr, size_t __size)
+      |              ^~~~~~~
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:26:13: error: void value not ignored as it ought to be
+   26 |     l->data = (void) realloc(l->data,l->capacity * (sizeof(void)));
+      |             ^
+cc1: all warnings being treated as errors
+Compilation failed
+49ae02a
